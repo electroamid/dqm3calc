@@ -16,12 +16,6 @@ html {
     font-size: 20px;
 }
 
-@media screen and (max-width:768px) {
-    html {
-        font-size: 10px;
-    }
-}
-
 body {
     padding: 10px 20px;
 }
@@ -30,10 +24,18 @@ select option[value=""] {
     display: none;
 }
 
-.l-header__pageTitle {
-    font-size: 1rem;
-    color: $color;
-    margin-bottom: 20px;
+.l-header {
+    &__pageTitle {
+        font-size: 1rem;
+        color: $color;
+        margin-bottom: 20px;
+
+    }
+
+    &__separator {
+        display: block;
+        white-space: nowrap;
+    }
 }
 
 .l-main {
@@ -299,7 +301,8 @@ select option[value=""] {
     }
 }
 
-.any-lank.any-type{
+.any-lank.any-type {
+
     .slime-type,
     .dragon-type,
     .natural-type,
@@ -317,6 +320,17 @@ select option[value=""] {
     .E-lank,
     .F-lank,
     .G-lank {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .l-main-item{
         display: block;
     }
 }

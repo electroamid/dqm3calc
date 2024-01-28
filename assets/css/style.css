@@ -14,11 +14,6 @@ html {
   font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 10px;
-  }
-}
 body {
   padding: 10px 20px;
 }
@@ -31,6 +26,10 @@ select option[value=""] {
   font-size: 1rem;
   color: #0095A9;
   margin-bottom: 20px;
+}
+.l-header__separator {
+  display: block;
+  white-space: nowrap;
 }
 
 .l-main__flex {
@@ -265,4 +264,13 @@ select option[value=""] {
 .any-lank.any-type .F-lank,
 .any-lank.any-type .G-lank {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .l-main-item {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
