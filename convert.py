@@ -40,7 +40,6 @@ for line in enumerate(datalist):
         content +="},\n"
 content += "]"
 
-print(content)
 w = open('monster_data.json', 'w', encoding="UTF-8")
 w.write(content)
 w.close()

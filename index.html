@@ -1,106 +1,600 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>モンスターズ３ステータスシミュレーター</title>
-        <meta data-n-head="1" data-hid="description" name="description" content="ドラゴンクエストモンスターズ３に登場するモンスターのステータス値計算サイトです。">
-        <link rel="stylesheet" href="./assets/css/index.css">
-    </head>
-    
-    <body>
-        <h1>ステータスシミュレーター</h1>
-        <h3>ドラゴンクエストモンスターズ３に登場するモンスターのステータス値計算サイトです。</h3>
-        <section id=""></section>
-        <div class="flex">
-            <div class="flex">
-                <p>祖父母１</p>
-                <select name="sofubo" id="sofubo1">
-                    <option value="slime">スライム</option>
-                    <option value="dragon">ドラゴン</option>
-                    <option value="natural">自然</option>
-                    <option value="beast">魔獣</option>
-                    <option value="material">物質</option>
-                    <option value="daemon">悪魔</option>
-                    <option value="zombie">ゾンビ</option>
-                    <option value="unknown">？？？</option>
-                </select>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モンスターズ３ステータスシミュレーター</title>
+    <meta data-n-head="1" data-hid="description" name="description" content="ドラゴンクエストモンスターズ３に登場するモンスターのステータス値計算サイトです。">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <h1 class="l-header__pageTitle">ドラゴンクエストモンスターズ３　ステータスシミュレーター</h1>
+    <main class="l-main">
+        <div class="l-main__flex">
+            
+            <div class="l-main__box">
+                <p class="l-main__boxTitle">祖父母の系統</p>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">祖父母１</p>
+                    <div id="grand-parent1" class="l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-slime" type="radio"
+                                value="slime" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-dragon" type="radio"
+                                value="dragon" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-natural" type="radio"
+                                value="natural" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-natural"> <img
+                                    src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-beast" type="radio"
+                                value="beast" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-material" type="radio"
+                                value="material" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-daemon" type="radio"
+                                value="daemon" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-zombie" type="radio"
+                                value="zombie" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent1-unknown" type="radio"
+                                value="unknown" name="grand-parent1">
+                            <label class="input-label" for="grand-parent1-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">祖父母２</p>
+                    <div id="grand-parent2" class="l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-slime" type="radio"
+                                value="slime" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-dragon" type="radio"
+                                value="dragon" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-natural" type="radio"
+                                value="natural" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-natural">
+                                <img src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-beast" type="radio"
+                                value="beast" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-material" type="radio"
+                                value="material" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-daemon" type="radio"
+                                value="daemon" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-zombie" type="radio"
+                                value="zombie" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent2-unknown" type="radio"
+                                value="unknown" name="grand-parent2">
+                            <label class="input-label" for="grand-parent2-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">祖父母３</p>
+                    <div id="grand-parent3" class="l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-slime" type="radio"
+                                value="slime" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-dragon" type="radio"
+                                value="dragon" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-natural" type="radio"
+                                value="natural" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-natural">
+                                <img src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-beast" type="radio"
+                                value="beast" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-material" type="radio"
+                                value="material" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-daemon" type="radio"
+                                value="daemon" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-zombie" type="radio"
+                                value="zombie" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent3-unknown" type="radio"
+                                value="unknown" name="grand-parent3">
+                            <label class="input-label" for="grand-parent3-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">祖父母４</p>
+                    <div id="grand-parent4" class="l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-slime" type="radio"
+                                value="slime" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-dragon" type="radio"
+                                value="dragon" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-natural" type="radio"
+                                value="natural" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-natural">
+                                <img src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-beast" type="radio"
+                                value="beast" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-material" type="radio"
+                                value="material" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-daemon" type="radio"
+                                value="daemon" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-zombie" type="radio"
+                                value="zombie" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="grand-parent4-unknown" type="radio"
+                                value="unknown" name="grand-parent4">
+                            <label class="input-label" for="grand-parent4-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex">
-                <p>祖父母２</p>
-                <select name="sofubo" id="sofubo1">
-                    <option value="slime">スライム</option>
-                    <option value="dragon">ドラゴン</option>
-                    <option value="natural">自然</option>
-                    <option value="beast">魔獣</option>
-                    <option value="material">物質</option>
-                    <option value="daemon">悪魔</option>
-                    <option value="zombie">ゾンビ</option>
-                    <option value="unknown">？？？</option>
-                </select>
-            </div>
-            <div class="flex">
-                <p>祖父母３</p>
-                <select name="sofubo" id="sofubo1">
-                    <option value="slime">スライム</option>
-                    <option value="dragon">ドラゴン</option>
-                    <option value="natural">自然</option>
-                    <option value="beast">魔獣</option>
-                    <option value="material">物質</option>
-                    <option value="daemon">悪魔</option>
-                    <option value="zombie">ゾンビ</option>
-                    <option value="unknown">？？？</option>
-                </select>
-            </div>
-            <div class="flex">
-                <p>祖父母４</p>
-                <select name="sofubo" id="sofubo1">
-                    <option value="slime">スライム</option>
-                    <option value="dragon">ドラゴン</option>
-                    <option value="natural">自然</option>
-                    <option value="beast">魔獣</option>
-                    <option value="material">物質</option>
-                    <option value="daemon">悪魔</option>
-                    <option value="zombie">ゾンビ</option>
-                    <option value="unknown">？？？</option>
-                </select>
+            <div class="l-main__box">
+                <p class="l-main__boxTitle">両親の系統・レベル</p>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">両親１</p>
+                    <div id="parent1" class="l-main-selectbox l-main-selectbox--min">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-slime" type="radio" value="slime"
+                                name="parent1">
+                            <label class="input-label" for="parent1-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-dragon" type="radio" value="dragon"
+                                name="parent1">
+                            <label class="input-label" for="parent1-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-natural" type="radio"
+                                value="natural" name="parent1">
+                            <label class="input-label" for="parent1-natural"> <img src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-beast" type="radio" value="beast"
+                                name="parent1">
+                            <label class="input-label" for="parent1-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-material" type="radio"
+                                value="material" name="parent1">
+                            <label class="input-label" for="parent1-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-daemon" type="radio" value="daemon"
+                                name="parent1">
+                            <label class="input-label" for="parent1-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-zombie" type="radio" value="zombie"
+                                name="parent1">
+                            <label class="input-label" for="parent1-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent1-unknown" type="radio"
+                                value="unknown" name="parent1">
+                            <label class="input-label" for="parent1-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                    <p class="l-main-item__title">レベル</p>
+                    <input class="l-main-item__input" type="number" id="parent1-level" name="parent1-level" min="10"
+                        max="100" value="100" />
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">両親２</p>
+                    <div id="parent2" class="l-main-selectbox l-main-selectbox--min">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-slime" type="radio" value="slime"
+                                name="parent2">
+                            <label class="input-label" for="parent2-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-dragon" type="radio" value="dragon"
+                                name="parent2">
+                            <label class="input-label" for="parent2-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-natural" type="radio"
+                                value="natural" name="parent2">
+                            <label class="input-label" for="parent2-natural">
+                                <img src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-beast" type="radio" value="beast"
+                                name="parent2">
+                            <label class="input-label" for="parent2-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-material" type="radio"
+                                value="material" name="parent2">
+                            <label class="input-label" for="parent2-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-daemon" type="radio" value="daemon"
+                                name="parent2">
+                            <label class="input-label" for="parent2-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-zombie" type="radio" value="zombie"
+                                name="parent2">
+                            <label class="input-label" for="parent2-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="parent2-unknown" type="radio"
+                                value="unknown" name="parent2">
+                            <label class="input-label" for="parent2-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                    <p class="l-main-item__title">レベル</p>
+                    <input class="l-main-item__input" type="number" id="parent2-level" name="parent2-level" min="10"
+                        max="100" value="100" />
+                </div>
             </div>
         </div>
-        <div class="flex">
-            <div class="flex">
-                <p>両親１</p>
-                <select name="sofubo" id="sofubo1">
-                    <option value="slime">スライム</option>
-                    <option value="dragon">ドラゴン</option>
-                    <option value="natural">自然</option>
-                    <option value="beast">魔獣</option>
-                    <option value="material">物質</option>
-                    <option value="daemon">悪魔</option>
-                    <option value="zombie">ゾンビ</option>
-                    <option value="unknown">？？？</option>
-                </select>
+        <div class="l-main__flex l-main__flex--bdbn slime dragon natural beast material daemon zombie unknown X S A B C D E F G any-lank any-type" id="search-condition">
+            <div class="l-main__box">
+                <p class="l-main__boxTitle">子の種族</p>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">絞り込み</p>
+                    <div id="child-search-type" class="l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-slime" type="checkbox"
+                                value="slime" name="child-search-type">
+                            <label class="input-label" for="child-search-type-slime">
+                                <img src="./assets/imgs/slime.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-dragon" type="checkbox"
+                                value="dragon" name="child-search-type">
+                            <label class="input-label" for="child-search-type-dragon">
+                                <img src="./assets/imgs/dragon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-natural" type="checkbox"
+                                value="natural" name="child-search-type">
+                            <label class="input-label" for="child-search-type-natural">
+                                <img src="./assets/imgs/natural.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-beast" type="checkbox"
+                                value="beast" name="child-search-type">
+                            <label class="input-label" for="child-search-type-beast">
+                                <img src="./assets/imgs/beast.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-material" type="checkbox"
+                                value="material" name="child-search-type">
+                            <label class="input-label" for="child-search-type-material">
+                                <img src="./assets/imgs/material.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-daemon" type="checkbox"
+                                value="daemon" name="child-search-type">
+                            <label class="input-label" for="child-search-type-daemon">
+                                <img src="./assets/imgs/daemon.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-zombie" type="checkbox"
+                                value="zombie" name="child-search-type">
+                            <label class="input-label" for="child-search-type-zombie">
+                                <img src="./assets/imgs/zombie.webp">
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden" id="child-search-type-unknown" type="checkbox"
+                                value="unknown" name="child-search-type">
+                            <label class="input-label" for="child-search-type-unknown">
+                                <img src="./assets/imgs/unknown.webp">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title"></p>
+                    <div id="child-search-lank" class="l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-g" type="checkbox" value="G" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-g">
+                                <p class="input-label__innerText">G</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-f" type="checkbox" value="F" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-f">
+                                <p class="input-label__innerText">F</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-e" type="checkbox" value="E" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-e">
+                                <p class="input-label__innerText">E</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-d" type="checkbox" value="D" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-d">
+                                <p class="input-label__innerText">D</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-c" type="checkbox" value="C" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-c">
+                                <p class="input-label__innerText">C</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-b" type="checkbox" value="B" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-b">
+                                <p class="input-label__innerText">B</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-a" type="checkbox" value="A" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-a">
+                                <p class="input-label__innerText">A</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-s" type="checkbox" value="S" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-s">
+                                <p class="input-label__innerText">S</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-search-lank-x" type="checkbox" value="X" name="child-search-lank">
+                            <label class="input-label" for="child-search-lank-x">
+                                <p class="input-label__innerText">X</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">種族名</p>
+                    <select class="l-main-item__select" name="child-name" id="child-species">
+                        <option value="" selected disabled>種族名を選択</option>
+                    </select>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title">行動回数</p>
+                    <select class="l-main-item__select" name="action-per-turn" id="action-per-turn">
+                        <option value="1" selected>1回行動</option>
+                        <option value="0.9">1~2回行動</option>
+                        <option value="0.8">1~3回行動</option>
+                        <option value="0.8">2回行動</option>
+                        <option value="0.7">2~3回行動</option>
+                    </select>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--wauto">サイズ</p>
+                    <div id="child-size" class="l-main-selectbox l-main-selectbox">
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-size-s" type="radio" value="S" name="child-size" checked>
+                            <label class="input-label" for="child-size-s">
+                                <p class="input-label__innerText">S</p>
+                            </label>
+                        </div>
+                        <div class="l-main-selectbox__inputWrapper">
+                            <input class="l-main-selectbox__inputHidden--checkbox l-main-selectbox__inputHidden"
+                                id="child-size-l" type="radio" value="L" name="child-size">
+                            <label class="input-label" for="child-size-l">
+                                <p class="input-label__innerText">L</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-main-item">
+                    <button id="calc-button" class="l-main-item__button">計算</button>
+                </div>
             </div>
-            <div class="flex">
-                <p>両親２</p>
-                <select name="sofubo" id="sofubo1">
-                    <option value="slime">スライム</option>
-                    <option value="dragon">ドラゴン</option>
-                    <option value="natural">自然</option>
-                    <option value="beast">魔獣</option>
-                    <option value="material">物質</option>
-                    <option value="daemon">悪魔</option>
-                    <option value="zombie">ゾンビ</option>
-                    <option value="unknown">？？？</option>
-                </select>
+        </div>
+        <div class="l-main__flex l-main__flex--bdbn">
+            <div class="l-main__box">
+                <p class="l-main__boxTitle">ステータス理論値</p>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--w120">HP</p>
+                    <p id="h" class="l-main-item__value">-</p>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--w120">MP</p>
+                    <p id="m" class="l-main-item__value">-</p>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--w120">攻撃力</p>
+                    <p id="a" class="l-main-item__value">-</p>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--w120">守備力</p>
+                    <p id="d" class="l-main-item__value">-</p>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--w120">かしこさ</p>
+                    <p id="w" class="l-main-item__value">-</p>
+                </div>
+                <div class="l-main-item">
+                    <p class="l-main-item__title l-main-item__title--w120">すばやさ</p>
+                    <p id="s" class="l-main-item__value">-</p>
+                </div>
             </div>
         </div>
-        <div class="flex">
-            <p>親１のレベル</p>
-            <input type="text" value="100">
-        </div>
-        <div class="flex">
-            <p>親２のレベル</p>
-            <input type="text" value="100">
-        </div>
-    </body>
+    </main>
+</body>
+
 </html>

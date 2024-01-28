@@ -1,0 +1,268 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+body {
+  padding: 10px 20px;
+}
+
+select option[value=""] {
+  display: none;
+}
+
+.l-header__pageTitle {
+  font-size: 1rem;
+  color: #0095A9;
+  margin-bottom: 20px;
+}
+
+.l-main__flex {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #0095A9;
+  margin-bottom: 40px;
+}
+.l-main__flex--bdbn {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.l-main__box {
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+.l-main__box--mb0 {
+  margin-bottom: 0;
+}
+.l-main__boxTitle {
+  font-size: 1rem;
+  color: #0095A9;
+  margin-bottom: 20px;
+}
+.l-main-item {
+  display: flex;
+  margin-bottom: 14px;
+}
+.l-main-item--mb40 {
+  margin-bottom: 40px;
+}
+.l-main-item__title {
+  width: 80px;
+  font-size: 1rem;
+  color: #0095A9;
+  margin-right: 10px;
+}
+.l-main-item__title--wauto {
+  width: auto;
+  margin-right: 30px;
+}
+.l-main-item__title--w120 {
+  width: 120px;
+}
+.l-main-item__value {
+  width: 100px;
+  font-size: 1rem;
+  color: #0095A9;
+  margin-right: 10px;
+}
+.l-main-item__input {
+  height: 32px;
+  width: 80px;
+  border: 2px solid #0095A9;
+  border-radius: 4px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  color: #0095A9;
+}
+.l-main-item__select {
+  height: 32px;
+  width: 240px;
+  border: 2px solid #0095A9;
+  border-radius: 4px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  color: #0095A9;
+}
+.l-main-item__button {
+  height: 32px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0095A9;
+  border: none;
+  border-radius: 100px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.l-main-selectbox {
+  display: flex;
+}
+.l-main-selectbox--min {
+  flex-wrap: wrap;
+  width: 150px;
+}
+.l-main-selectbox__inputWrapper {
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+.l-main-selectbox__inputHidden {
+  display: none;
+}
+.l-main-selectbox__inputHidden + .input-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  padding: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.l-main-selectbox__inputHidden + .input-label img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.l-main-selectbox__inputHidden + .input-label p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #0095A9;
+}
+.l-main-selectbox__inputHidden:checked + .input-label {
+  border: 2px solid #0095A9;
+}
+.l-main-selectbox__inputHidden--checkbox + .input-label {
+  border: 2px solid #0095A9;
+}
+.l-main-selectbox__inputHidden--checkbox:checked + .input-label {
+  border: 2px solid transparent;
+  background-color: #0095A9;
+}
+.l-main-selectbox__inputHidden--checkbox:checked + .input-label p {
+  color: white;
+}
+
+.slime-type,
+.dragon-type,
+.natural-type,
+.beast-type,
+.material-type,
+.daemon-type,
+.zombie-type,
+.unknown-type {
+  display: block;
+}
+
+.X-lank,
+.S-lank,
+.A-lank,
+.B-lank,
+.C-lank,
+.D-lank,
+.E-lank,
+.F-lank,
+.G-lank {
+  display: block;
+}
+
+.slime .slime-type,
+.dragon .dragon-type,
+.natural .natural-type,
+.beast .beast-type,
+.material .material-type,
+.daemon .daemon-type,
+.zombie .zombie-type,
+.unknown .unknown-type {
+  display: none;
+}
+
+.X .X-lank,
+.S .S-lank,
+.A .A-lank,
+.B .B-lank,
+.C .C-lank,
+.D .D-lank,
+.E .E-lank,
+.F .F-lank,
+.G .G-lank {
+  display: none;
+}
+
+.any-type .slime-type,
+.any-type .dragon-type,
+.any-type .natural-type,
+.any-type .beast-type,
+.any-type .material-type,
+.any-type .daemon-type,
+.any-type .zombie-type,
+.any-type .unknown-type {
+  display: block;
+}
+.any-type.X .X-lank, .any-type.S .S-lank, .any-type.A .A-lank, .any-type.B .B-lank, .any-type.C .C-lank, .any-type.D .D-lank, .any-type.E .E-lank, .any-type.F .F-lank, .any-type.G .G-lank {
+  display: none;
+}
+
+.any-lank .X-lank,
+.any-lank .S-lank,
+.any-lank .A-lank,
+.any-lank .B-lank,
+.any-lank .C-lank,
+.any-lank .D-lank,
+.any-lank .E-lank,
+.any-lank .F-lank,
+.any-lank .G-lank {
+  display: block;
+}
+.any-lank.slime .slime-type, .any-lank.dragon .dragon-type, .any-lank.natural .natural-type, .any-lank.beast .beast-type, .any-lank.material .material-type, .any-lank.daemon .daemon-type, .any-lank.zombie .zombie-type, .any-lank.unknown .unknown-type {
+  display: none;
+}
+
+.any-lank.any-type .slime-type,
+.any-lank.any-type .dragon-type,
+.any-lank.any-type .natural-type,
+.any-lank.any-type .beast-type,
+.any-lank.any-type .material-type,
+.any-lank.any-type .daemon-type,
+.any-lank.any-type .zombie-type,
+.any-lank.any-type .unknown-type,
+.any-lank.any-type .X-lank,
+.any-lank.any-type .S-lank,
+.any-lank.any-type .A-lank,
+.any-lank.any-type .B-lank,
+.any-lank.any-type .C-lank,
+.any-lank.any-type .D-lank,
+.any-lank.any-type .E-lank,
+.any-lank.any-type .F-lank,
+.any-lank.any-type .G-lank {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
